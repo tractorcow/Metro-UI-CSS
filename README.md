@@ -21,6 +21,7 @@ and Valerio Battaglia. It has been packaged as an easy to import Silverstripe th
 
 ```bash
 composer require "tractorcow/silverstripe-metro": "3.1.*@dev"
+```
 
 The best way to extend this theme is to create a subtheme for your site. E.g. metro_myblog. Copy and paste Page.ss, or
 create templates for other pages types to override the default templates.
