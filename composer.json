@@ -1,0 +1,22 @@
+{
+	"name": "tractorcow/silverstripe-metro",
+	"description": "Metro theme for Silverstripe",
+	"type": "silverstripe-theme",
+	"keywords": ["silverstripe", "theme", "metro"],
+	"authors": [
+		{
+			"name": "Damian Mooyman",
+			"email": "damian.mooyman@gmail.com"
+		}
+	],
+	"support": {
+		"issues": "http://github.com/tractorcow/silverstripe-metro/issues"
+	},
+	"require": {
+		"silverstripe/framework": ">=3.0",
+		"silverstripe/cms": ">=3.0",
+	},
+	"extra": {
+		"installer-name": "metro"
+	}
+}

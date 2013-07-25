@@ -1,0 +1,74 @@
+
+.placeholder {
+	@include opacity(1.0);
+}
+input::-webkit-input-placeholder {
+   @extend .placeholder;
+}
+input:-ms-input-placeholder {
+   @extend .placeholder;
+}
+
+input:-moz-placeholder { 
+   @extend .placeholder;
+}
+input::-moz-placeholder { 
+   @extend .placeholder;
+}
+
+// Hide placeholders on focused elements
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+
+.Form {
+	form > .message {
+		
+	}
+	
+	.field {
+		overflow: visible;
+		clear: both;
+		position: relative;
+		
+		> label.left {
+		}
+		
+		.middleColumn {
+			overflow: hidden;
+		
+			input.text {
+			}
+
+			textarea {
+			}
+
+			input.text,
+			textarea {
+				
+				&.required,
+				&.holder-required {
+					color: white;
+				}
+			}
+			
+			> label {
+				display: block;
+				float: left;
+			}
+		}
+		> .message {
+		}
+	}
+	
+	.Actions {
+		padding: 30px 0;
+		
+		input {
+		}
+		
+		#ForgotPassword {
+			padding: 30px 0 0 0;
+		}
+	}
+}

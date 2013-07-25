@@ -1,0 +1,390 @@
+/**
+ * Copied from metro/less/typography.less
+ */
+
+$unit: 20px;
+$subunit: 5px;
+
+@font-face {
+    font-family: "PT Serif Caption";
+    font-style: normal;
+    font-weight: 400;
+    src: local("PT Serif Caption"), local("PTSerif-Caption"), url(https://themes.googleusercontent.com/static/fonts/ptserifcaption/v4/7xkFOeTxxO1GMC1suOUYWWhBabBbEjGd1iRmpyoZukE.woff) format('woff');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Open Sans Bold"), local("OpenSans-Bold"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzJ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Open Sans Light"), local("OpenSans-Light"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTZ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 800;
+    src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hp1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Open Sans"), local("OpenSans"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+/**
+ * State mixins
+ */
+@mixin text-rest-state {
+	color: rgba(0, 0, 0, 1.0);
+}
+@mixin text-rest2-state {
+	color: rgba(0, 0, 0, 0.6);
+}
+@mixin text-hover-state {
+	color: rgba(0, 0, 0, 0.8);
+}
+@mixin text-pressed-state {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+/** Font definitions */
+@mixin font-header {
+	font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 200;
+	font-size: 42pt;
+	letter-spacing: 0.00em;
+	line-height: 44pt;
+	font-smooth:always;
+}
+
+@mixin font-subheader {
+	@include font-header();
+	font-size: 20pt;
+	letter-spacing: 0.01em;
+	line-height: 22pt;
+}
+
+@mixin font-subheader-secondary {
+	@include font-subheader();
+}
+
+@mixin font-subheader-smaller {
+	@include font-header();
+	letter-spacing: 0.01em;
+	line-height: 18pt;
+	font-size: 16pt;
+}
+
+@mixin font-subheader-secondary-smaller {
+	@include font-subheader-smaller();
+}
+
+@mixin font-small-subheader {
+	font-family: 'Segoe UI Semibold', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	font-size: 11pt;
+	letter-spacing: 0.01em;
+	line-height: 13pt;
+	font-smooth:always;
+}
+
+@mixin font-small-subheader-secondary {
+	@include font-small-subheader();
+}
+	
+@mixin font-navigation {
+	font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 11pt;
+	letter-spacing: 0.01em;
+	line-height: 13pt;
+	font-smooth:always;
+}
+
+@mixin font-body {
+	font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 11pt;
+	letter-spacing: 0.02em;
+	line-height: 14pt;
+	font-smooth:always;
+}
+@mixin font-body-secondary {
+	@include font-body();
+}
+@mixin font-normal {
+	@include font-body();
+}
+
+@mixin font-link {
+	font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 11pt;
+	font-smooth:always;
+	line-height: 13pt;
+}
+
+@mixin font-tertiary {
+	font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 9pt;
+	font-smooth:always;
+	line-height: 11pt;
+}
+@mixin font-tertiary-secondary {
+	@include font-tertiary();
+}
+
+@mixin font-control {
+	font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 9pt;
+	font-smooth:always;
+	line-height: 11pt;
+}
+
+@mixin font-small {
+	font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 8pt;
+	font-smooth:always;
+	line-height: 10pt;
+}
+
+@mixin font-long-text {
+	//.body;
+	font-family: 'PT Serif Caption', sans-serif, serif !important;
+	font-weight: 300;
+	font-size: 10pt;
+	letter-spacing: 0.02em;
+	line-height: 12pt;
+	font-smooth:always;
+}
+@mixin font-long-text-smaller {
+	@extend .long-text;
+	font-size: 9pt;
+	line-height: 11pt;
+}
+@mixin font-long-text-lead {
+	@extend .long-text;
+	font-size: 20pt;
+	line-height: 22pt;
+}
+
+/**
+ * State definitions
+ */
+@mixin state-main {
+	@include text-rest-state;
+	
+	&:hover {
+		@include text-hover-state;
+	}
+	&:active {
+		@include text-pressed-state;
+	}
+}
+
+@mixin state-secondary {
+	@include state-main;
+	@include text-rest2-state;
+}
+
+@mixin state-link {
+	color: rgb(46, 146, 207);
+	&:hover {
+		color: rgba(45, 173, 237, 0.8);
+	}
+	&:active {
+		color: rgba(45, 173, 237, 0.6);
+	}
+}
+
+.typography {
+	* {
+	}
+
+	b, strong {
+		font-weight: bold;
+	}
+ 
+	i, em {
+		font-style: italic;
+	}
+	
+	// RULE
+	hr {
+		height: 0;
+		border: 0 none;
+		border-top: 1px solid black;
+		margin: 0 0 1.5em 0;
+	}
+
+	// PARAGRAPHS
+	p {
+		@include font-body;
+		margin: 0 0 10px;
+	}
+
+	// QUOTES
+	
+	blockquote {
+		margin: 0;
+		padding: $subunit $unit;
+		border-left: 4px #ccc solid;
+		display: block;
+		background-color: rgba(204, 204, 204, 0.1);
+
+		p {
+			margin-bottom: 0;
+		}
+
+		small:before {
+			content: '\2014';
+			@include text-pressed-state;
+			margin-right: $subunit;
+		}
+	}
+
+	// LINKS 
+
+	a {
+		@include font-link;
+		@include state-link;
+		text-decoration: none;
+	}
+
+	// LIST STYLES 
+	
+	ul, ol {
+		padding: 0;
+		margin: 0 0 10px 0px;
+		display: block;
+	}
+
+	ul:nth-child(1) {
+		margin-left: 25px;
+	}
+
+	ul ul, ul ol, ol ol, ol ul {
+		margin-bottom: 0 !important;
+	}
+
+	ul {
+		list-style-position: inside;
+		list-style-type: square;
+
+		ul {
+			list-style-type: circle;
+		}
+	}
+
+	ul, ol {
+		list-style-position: inside;
+		li {
+			display: list-item;
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+
+	// HEADER STYLES 
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0 0 10px 0;
+		padding: 0;
+	}
+
+	h1 {
+		@include font-header;
+		@include state-main;
+	}
+
+	h2 {
+		@include font-subheader;
+		@include state-main;
+	}
+
+	h3 {
+		@include font-subheader;
+		@include state-secondary;
+		font-size: 16pt;
+		line-height: 24px;
+	}
+
+	h4 {
+		@include font-small-subheader;
+		@include state-main;
+	}
+
+	h5 {
+		@include font-small-subheader-secondary;
+		@include state-secondary;
+		font-size: 90%;
+	}
+
+	h6 {
+		@include font-small-subheader-secondary;
+		@include state-secondary;
+		font-size: 80%;
+	}
+
+	// PRE STYLES 
+	
+	pre {
+		white-space: pre;
+	}
+
+	// TABLE STYLING 
+	
+	table {}
+	tr {}
+
+	td {}
+
+	// WYSIWYG EDITOR ALIGNMENT CLASSES 
+	
+	.left {
+		text-align: left;
+	}
+	.center {
+		text-align: center;
+	}
+	.right {
+		text-align: right;
+	}
+
+	// IMAGES 
+	
+	img {
+		border: none;
+		padding: 0 15px 15px 0;
+		&.right {
+			float: right;
+			padding: 0 0 15px 15px;
+		}
+		&.left {
+			float: left;
+		}
+		&.leftAlone {
+			float: left;
+			margin-right: 100%;
+		}
+		&.center {
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		
+		}
+	}
+}

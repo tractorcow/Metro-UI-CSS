@@ -1,3 +1,34 @@
+# Silverstripe Metro Theme
+
+This theme builds on top of the [metroui design library ](http://metroui.org.ua) built by Sergey Primenov, Sergey Volkov,
+and Valerio Battaglia. It has been packaged as an easy to import Silverstripe theme with basic templates for convenience.
+
+## Credits and Authors
+
+ * Damian Mooyman - <https://github.com/tractorcow/silverstripe-metro>
+ * Sergey Pimenov
+ * Sergey Volkov
+ * Voljskiy, Russia.
+
+## Requirements
+
+ * SilverStripe 3.1 or above
+ * PHP 5.3
+
+## Installation Instructions
+
+ * Extract all files into the 'themes/metro' folder, or install using composer
+
+```bash
+composer require "tractorcow/silverstripe-metro": "3.1.*@dev"
+
+The best way to extend this theme is to create a subtheme for your site. E.g. metro_myblog. Copy and paste Page.ss, or
+create templates for other pages types to override the default templates.
+
+# Metro UI
+
+Below follows the original Metro UI core documentation
+
 # Welcome
 
 Metro UI CSS a set of styles to create a site with an interface similar to Windows 8 Metro UI. This set of styles was developed as a self-contained solution.
