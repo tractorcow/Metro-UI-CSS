@@ -21,9 +21,15 @@ input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; }
 input:focus::-moz-placeholder { color:transparent; }
 
-.Form {
+form {
 	form > .message {
 		
+	}
+	
+	// Hide fieldset extras
+	fieldset {
+		padding: 0 !important;
+		border: 0 none !important;
 	}
 	
 	.field {

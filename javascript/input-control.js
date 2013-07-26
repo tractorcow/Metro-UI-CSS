@@ -41,7 +41,8 @@
             }
 
             $helper.attr('tabindex', '-1');
-            $helper.attr('type', 'button');
+			// this doesn't work in many versions of jquery
+            //$helper.attr('type', 'button');
 
             // clear text when click on helper
             $helper.on('click', function () {
