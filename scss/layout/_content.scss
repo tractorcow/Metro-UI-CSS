@@ -1,3 +1,8 @@
 .typography {
 	overflow: hidden;
 }
+
+// Fix padding on prettify items
+.prettyprint ol.linenums > li > *:first-child {
+	padding-left: 15px;
+}

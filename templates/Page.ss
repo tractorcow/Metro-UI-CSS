@@ -27,8 +27,12 @@
 		<% require javascript('themes/metro/javascript/tile-slider.js') %>
 		<% require javascript('themes/metro/javascript/tile-drag.js') %>
 		<% require javascript('themes/metro/javascript/calendar.js') %>
+		
+		<% require css('themes/metro/public/js/google-code-prettify/prettify.css') %>
+		<% require javascript('themes/metro/public/js/google-code-prettify/prettify.js') %>
+		<% require javascript('themes/metro/javascript/prettify-loader.js') %>
 	</head>
-	<body class="metrouicss" onload="prettyPrint()">
+	<body class="metrouicss">
 		<% include Navigation %>
 		$Layout
 		<% include Footer %>
