@@ -1,6 +1,6 @@
 <div class="page">
 	<nav class="nav-bar">
-		<div class="nav-bar-inner padding10">
+		<div class="nav-bar-inner padding10 bg-color-teal">
 			<span class="pull-menu"></span>
 
 			<a href="$BaseURL"><span class="element brand">

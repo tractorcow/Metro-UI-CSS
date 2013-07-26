@@ -12,7 +12,7 @@ and Valerio Battaglia. It has been packaged as an easy to import Silverstripe th
 
 ## Requirements
 
- * SilverStripe 3.1 or above
+ * SilverStripe 3.0 or above (both framework and cms)
  * PHP 5.3
 
 ## Installation Instructions
@@ -20,7 +20,7 @@ and Valerio Battaglia. It has been packaged as an easy to import Silverstripe th
  * Extract all files into the 'themes/metro' folder, or install using composer
 
 ```bash
-composer require "tractorcow/silverstripe-metro": "3.1.*@dev"
+composer require "tractorcow/silverstripe-metro": "3.0.*@dev"
 ```
 
 The best way to extend this theme is to create a subtheme for your site. E.g. metro_myblog. Copy and paste Page.ss, or
