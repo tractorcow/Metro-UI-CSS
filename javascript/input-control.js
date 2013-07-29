@@ -41,8 +41,9 @@
             }
 
             $helper.attr('tabindex', '-1');
-			// this doesn't work in many versions of jquery
-            //$helper.attr('type', 'button');
+			if(jQuery.fn.jquery >= 1.9) {
+				$helper.attr('type', 'button');
+			}
 
             // clear text when click on helper
             $helper.on('click', function () {
@@ -70,7 +71,10 @@
             text = $('<input type="text" />');
             password = $element.children('input');
             $helper.attr('tabindex', '-1');
-            $helper.attr('type', 'button');
+			console.log(jQuery.fn.jquery);
+			if(jQuery.fn.jquery >= 1.9) {
+				$helper.attr('type', 'button');
+			}
 
             // insert text element and hode password element when push helper
             $helper.on('mousedown', function () {
