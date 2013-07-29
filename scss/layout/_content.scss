@@ -3,6 +3,7 @@
 }
 
 // Fix padding on prettify items
-.prettyprint ol.linenums > li > *:first-child {
-	padding-left: 15px;
+.prettyprint ol.linenums {
+	list-style-position: outside;
+	margin-left: 35px;
 }

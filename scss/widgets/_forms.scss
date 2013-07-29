@@ -28,6 +28,7 @@ form {
 	
 	// Hide fieldset extras
 	fieldset {
+		margin: 30px 0 0 0;
 		padding: 0 !important;
 		border: 0 none !important;
 	}
@@ -68,7 +69,7 @@ form {
 	}
 	
 	.Actions {
-		padding: 30px 0;
+		margin: 0 0 10px 0;
 		
 		input {
 		}

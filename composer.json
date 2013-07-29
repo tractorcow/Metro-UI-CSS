@@ -20,6 +20,7 @@
 		"installer-name": "metro"
 	},
 	"suggest": {
-		"tractorcow/silverstripe-metro-blog": "Blog sub-theme for Metro"
+		"tractorcow/silverstripe-metro-blog": "Blog sub-theme for Metro",
+		"tractorcow/silverstripe-metro-comments": "Comments sub-theme for Metro"
 	}
 }
