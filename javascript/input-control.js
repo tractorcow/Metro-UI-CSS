@@ -46,7 +46,7 @@
 
             // clear text when click on helper
             $helper.on('click', function () {
-                input = $element.children('input');
+                input = $element.children('input, textarea');
                 if (input.prop('readonly')) {
                     return;
                 }

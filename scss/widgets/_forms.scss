@@ -21,6 +21,32 @@ input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; }
 input:focus::-moz-placeholder { color:transparent; }
 
+// Missing textarea helper styles from metro
+
+.input-control.text {
+	textarea:not(:focus) {
+		& ~ [class^="btn-"],
+		& ~ .helper {
+			display: none;
+		}
+	}
+
+	textarea:focus {
+		& ~ [class^="btn-"],
+		& ~ .helper {
+			display: block;
+		}
+	}
+
+
+	textarea:not(:focus) {
+		& ~ [class^="btn-"]:active,
+		& ~ .helper:active {
+			display: block;
+		}
+	}
+}
+
 form {
 	form > .message {
 		
