@@ -70,6 +70,11 @@ hr {
 	}
 }
 
+/* Fixes for rows clearing left hand menus */
+.metrouicss [class*="span"]:after {
+	clear: none;
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
     .metrouicss .page {
         width: 724px;
