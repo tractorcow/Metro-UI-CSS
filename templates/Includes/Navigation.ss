@@ -15,7 +15,7 @@
 							<li data-role="dropdown">
 								<a>$MenuTitle.XML</a>
 								<ul class="dropdown-menu">
-									<li><a href="$Link" title="$Title.ATT">$MenuTitle.XML</a></li>
+									<li><a href="$Link" title="$Title.ATT">$Title.XML</a></li>
 									<li class="divider"></li>
 									<% loop Children %>
 										<li><a href="$Link" title="$Title.ATT">$MenuTitle.XML</a></li>
