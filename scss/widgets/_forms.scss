@@ -60,7 +60,8 @@ input:focus::-moz-placeholder { color:transparent; }
 		border: 0 none !important;
 	}
 	
-	&#MemberLoginForm_LoginForm fieldset {
+	&#MemberLoginForm_LoginForm fieldset,
+	&#MemberLoginForm_LostPasswordForm fieldset {
 		margin: 0;
 	}
 	
@@ -96,6 +97,13 @@ input:focus::-moz-placeholder { color:transparent; }
 			}
 		}
 		> .message {
+		}
+		
+		&.confirmedpassword {
+			.showOnClick > a {
+				display: block;
+				margin: 0 0 10px 0;
+			}
 		}
 	}
 	

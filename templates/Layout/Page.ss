@@ -2,14 +2,17 @@
 	<% include PageHeader %>
 
 	<div class="page-region">
-		<div class="page-region-content">
-			<div class="grid">
-				<div class="row">
-					<div class="span10 typography">
-						$Content
-					</div>
+		<% if Content %>
+			<div class="page-region-content">
+				<div class="typography">
+					$Content
 				</div>
 			</div>
-		</div>
+		<% end_if %>
+		<% if Form %>
+			<div class="page-region-content">
+				$Form
+			</div>
+		<% end_if %>
 	</div>
 </article>
