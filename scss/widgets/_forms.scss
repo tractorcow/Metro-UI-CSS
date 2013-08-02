@@ -105,6 +105,13 @@ input:focus::-moz-placeholder { color:transparent; }
 				margin: 0 0 10px 0;
 			}
 		}
+		// Readonly field
+		&.readonly  .middleColumn {
+			margin: 0 0 10px 0;
+			.readonly {
+				font-weight: bold;
+			}
+		}
 	}
 	
 	.Actions {
