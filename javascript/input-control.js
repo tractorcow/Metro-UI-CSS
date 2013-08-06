@@ -71,7 +71,6 @@
             text = $('<input type="text" />');
             password = $element.children('input');
             $helper.attr('tabindex', '-1');
-			console.log(jQuery.fn.jquery);
 			if(jQuery.fn.jquery >= 1.9) {
 				$helper.attr('type', 'button');
 			}
