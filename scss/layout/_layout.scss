@@ -89,6 +89,15 @@ hr {
 }
 
 @media (max-width: 767px) {
+	// At this resolution ditch the sidebar
+	.metrouicss .page.with-sidebar .page-region {
+		margin-left: 0;
+		clear: both;
+	}
+	.metrouicss .page.secondary .page-region .page-region-content {
+		padding-left: 0;
+	}
+	
     .metrouicss .page {
         width: 100%;
     }
