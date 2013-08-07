@@ -49,8 +49,9 @@ input:focus::-moz-placeholder { color:transparent; }
 	
 // Basic form styles
 .metrouicss form {
-	form > .message {
-		
+	
+	.message {
+		color: red;
 	}
 	
 	// Hide fieldset extras
@@ -71,6 +72,7 @@ input:focus::-moz-placeholder { color:transparent; }
 		position: relative;
 		
 		> label.left {
+			display: none;
 		}
 		
 		.middleColumn {
@@ -96,8 +98,6 @@ input:focus::-moz-placeholder { color:transparent; }
 				float: left;
 			}
 		}
-		> .message {
-		}
 		
 		&.confirmedpassword {
 			.showOnClick > a {
@@ -122,6 +122,18 @@ input:focus::-moz-placeholder { color:transparent; }
 		
 		#ForgotPassword {
 			padding: 30px 0 0 0;
+		}
+	}
+	
+	// Fix for recaptcha forms 
+	#recaptcha_widget_div {
+		margin: 0 0 10px 0;
+		.recaptchatable .recaptcha_only_if_privacy {
+			line-height: 1px !important;
+			a {
+				font-size: 9pt;
+				line-height: 1px;
+			}
 		}
 	}
 }
