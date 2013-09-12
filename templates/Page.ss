@@ -28,6 +28,7 @@
 		<% require javascript('themes/metro/javascript/tile-drag.js') %>
 		<% require javascript('themes/metro/javascript/calendar.js') %>
 		
+		<% require javascript('themes/metro/javascript/jquery.html5-placeholder-shim.js') %>
 		<% require javascript('themes/metro/javascript/form-helper.js') %>
 		
 		<% require css('themes/metro/public/js/google-code-prettify/prettify.css') %>

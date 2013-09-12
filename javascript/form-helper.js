@@ -17,5 +17,10 @@
 			
 		});
 		
+		// Refresh placeholder fix
+		if (jQuery.placeholder) {
+			jQuery.placeholder.shim();
+		}
+		
 	});
 })(jQuery);
