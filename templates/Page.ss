@@ -39,5 +39,6 @@
 		<% include Navigation %>
 		$Layout
 		<% include Footer %>
+		$SilverStripeNavigator
 	</body>
 </html>

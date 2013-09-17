@@ -12,3 +12,9 @@
 .metrouicss .bg-color-black {
 	background: black;
 }
+
+// Navigator visibility
+#SilverStripeNavigator,
+#SilverStripeNavigatorMessage {
+	z-index: 1200;
+}
