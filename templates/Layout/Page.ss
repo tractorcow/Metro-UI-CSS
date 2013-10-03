@@ -14,5 +14,10 @@
 				$Form
 			</div>
 		<% end_if %>
+		<% if PageComments %>
+			<div class="page-region-content">
+				$PageComments
+			</div>
+		<% end_if %>
 	</div>
 </article>
